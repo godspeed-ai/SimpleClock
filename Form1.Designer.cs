@@ -82,7 +82,6 @@
             this.cmbMin.Name = "cmbMin";
             this.cmbMin.Size = new System.Drawing.Size(111, 27);
             this.cmbMin.TabIndex = 7;
-            this.cmbMin.SelectionChangeCommitted += new System.EventHandler(this.cmbMin_SelectionChangeCommitted);
             // 
             // cmbHour
             // 
@@ -91,7 +90,6 @@
             this.cmbHour.Name = "cmbHour";
             this.cmbHour.Size = new System.Drawing.Size(111, 27);
             this.cmbHour.TabIndex = 6;
-            this.cmbHour.SelectedIndexChanged += new System.EventHandler(this.cmbHour_SelectedIndexChanged);
             // 
             // btnCancelAlert
             // 
@@ -166,7 +164,7 @@
             // timerAlert
             // 
             this.timerAlert.Enabled = true;
-            this.timerAlert.Tick += new System.EventHandler(this.timerAlert_Tick);
+//            this.timerAlert.Tick += new System.EventHandler(this.timerAlert_Tick_1);
             // 
             // Form1
             // 
