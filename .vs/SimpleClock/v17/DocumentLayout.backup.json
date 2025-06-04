@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{E85F3F6B-A7C0-45BB-A696-AB49AB6A99BB}|SimpleClock.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E85F3F6B-A7C0-45BB-A696-AB49AB6A99BB}|SimpleClock.csproj|c:\\users\\asus\\source\\repos\\simpleclock\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E85F3F6B-A7C0-45BB-A696-AB49AB6A99BB}|SimpleClock.csproj|C:\\Users\\ASUS\\source\\repos\\SimpleClock\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E85F3F6B-A7C0-45BB-A696-AB49AB6A99BB}|SimpleClock.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -28,9 +28,10 @@
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\ASUS\\source\\repos\\SimpleClock\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAvwBoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAjwC8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-04T16:43:35.459Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {

@@ -82,6 +82,7 @@
             this.cmbMin.Name = "cmbMin";
             this.cmbMin.Size = new System.Drawing.Size(111, 27);
             this.cmbMin.TabIndex = 7;
+            this.cmbMin.SelectionChangeCommitted += new System.EventHandler(this.cmbMin_SelectionChangeCommitted);
             // 
             // cmbHour
             // 
@@ -90,6 +91,7 @@
             this.cmbHour.Name = "cmbHour";
             this.cmbHour.Size = new System.Drawing.Size(111, 27);
             this.cmbHour.TabIndex = 6;
+            this.cmbHour.SelectedIndexChanged += new System.EventHandler(this.cmbHour_SelectedIndexChanged);
             // 
             // btnCancelAlert
             // 
@@ -99,6 +101,7 @@
             this.btnCancelAlert.TabIndex = 5;
             this.btnCancelAlert.Text = "關閉鬧鐘";
             this.btnCancelAlert.UseVisualStyleBackColor = true;
+            this.btnCancelAlert.Click += new System.EventHandler(this.btnCancelAlert_Click);
             // 
             // btnSetAlert
             // 
@@ -108,6 +111,7 @@
             this.btnSetAlert.TabIndex = 4;
             this.btnSetAlert.Text = "設定鬧鐘";
             this.btnSetAlert.UseVisualStyleBackColor = true;
+            this.btnSetAlert.Click += new System.EventHandler(this.btnSetAlert_Click);
             // 
             // txtWeekDay
             // 
