@@ -113,5 +113,40 @@ namespace SimpleClock
             btnSetAlert.Enabled = true;
             btnCancelAlert.Enabled = false;
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timerStopWatch_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPause_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLog_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -39,11 +39,20 @@
             this.txtTime = new System.Windows.Forms.TextBox();
             this.txtDate = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txtStopWatch = new System.Windows.Forms.TextBox();
+            this.listStopWatchLog = new System.Windows.Forms.ListBox();
+            this.btnStop = new System.Windows.Forms.Button();
+            this.btnLog = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.btnPause = new System.Windows.Forms.Button();
+            this.btnStart = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.timerClcok = new System.Windows.Forms.Timer(this.components);
             this.timerAlert = new System.Windows.Forms.Timer(this.components);
+            this.timerStopWatch = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.時鐘.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -137,6 +146,13 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.txtStopWatch);
+            this.tabPage2.Controls.Add(this.listStopWatchLog);
+            this.tabPage2.Controls.Add(this.btnStop);
+            this.tabPage2.Controls.Add(this.btnLog);
+            this.tabPage2.Controls.Add(this.btnReset);
+            this.tabPage2.Controls.Add(this.btnPause);
+            this.tabPage2.Controls.Add(this.btnStart);
             this.tabPage2.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -145,6 +161,74 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "碼表";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // txtStopWatch
+            // 
+            this.txtStopWatch.Font = new System.Drawing.Font("新細明體", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtStopWatch.Location = new System.Drawing.Point(36, 11);
+            this.txtStopWatch.Name = "txtStopWatch";
+            this.txtStopWatch.Size = new System.Drawing.Size(578, 84);
+            this.txtStopWatch.TabIndex = 7;
+            this.txtStopWatch.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // listStopWatchLog
+            // 
+            this.listStopWatchLog.FormattingEnabled = true;
+            this.listStopWatchLog.ItemHeight = 19;
+            this.listStopWatchLog.Location = new System.Drawing.Point(36, 105);
+            this.listStopWatchLog.Name = "listStopWatchLog";
+            this.listStopWatchLog.Size = new System.Drawing.Size(238, 213);
+            this.listStopWatchLog.TabIndex = 5;
+            // 
+            // btnStop
+            // 
+            this.btnStop.Location = new System.Drawing.Point(280, 175);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(235, 29);
+            this.btnStop.TabIndex = 4;
+            this.btnStop.Text = "停止並歸零";
+            this.btnStop.UseVisualStyleBackColor = true;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
+            // 
+            // btnLog
+            // 
+            this.btnLog.Location = new System.Drawing.Point(405, 140);
+            this.btnLog.Name = "btnLog";
+            this.btnLog.Size = new System.Drawing.Size(110, 29);
+            this.btnLog.TabIndex = 3;
+            this.btnLog.Text = "紀錄";
+            this.btnLog.UseVisualStyleBackColor = true;
+            this.btnLog.Click += new System.EventHandler(this.btnLog_Click);
+            // 
+            // btnReset
+            // 
+            this.btnReset.Location = new System.Drawing.Point(280, 140);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(110, 29);
+            this.btnReset.TabIndex = 2;
+            this.btnReset.Text = "歸零";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // btnPause
+            // 
+            this.btnPause.Location = new System.Drawing.Point(405, 105);
+            this.btnPause.Name = "btnPause";
+            this.btnPause.Size = new System.Drawing.Size(110, 29);
+            this.btnPause.TabIndex = 1;
+            this.btnPause.Text = "暫停";
+            this.btnPause.UseVisualStyleBackColor = true;
+            this.btnPause.Click += new System.EventHandler(this.btnPause_Click);
+            // 
+            // btnStart
+            // 
+            this.btnStart.Location = new System.Drawing.Point(280, 105);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(110, 29);
+            this.btnStart.TabIndex = 0;
+            this.btnStart.Text = "開始";
+            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // tabPage3
             // 
@@ -164,7 +248,11 @@
             // timerAlert
             // 
             this.timerAlert.Enabled = true;
-//            this.timerAlert.Tick += new System.EventHandler(this.timerAlert_Tick_1);
+            // 
+            // timerStopWatch
+            // 
+            this.timerStopWatch.Interval = 1;
+            this.timerStopWatch.Tick += new System.EventHandler(this.timerStopWatch_Tick);
             // 
             // Form1
             // 
@@ -177,6 +265,8 @@
             this.tabControl1.ResumeLayout(false);
             this.時鐘.ResumeLayout(false);
             this.時鐘.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -196,6 +286,14 @@
         private System.Windows.Forms.TextBox txtTime;
         private System.Windows.Forms.Timer timerClcok;
         private System.Windows.Forms.Timer timerAlert;
+        private System.Windows.Forms.TextBox txtStopWatch;
+        private System.Windows.Forms.ListBox listStopWatchLog;
+        private System.Windows.Forms.Button btnStop;
+        private System.Windows.Forms.Button btnLog;
+        private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Button btnPause;
+        private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Timer timerStopWatch;
     }
 }
 
