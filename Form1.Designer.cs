@@ -169,7 +169,6 @@
             this.txtStopWatch.Name = "txtStopWatch";
             this.txtStopWatch.Size = new System.Drawing.Size(578, 84);
             this.txtStopWatch.TabIndex = 7;
-            this.txtStopWatch.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // listStopWatchLog
             // 
